@@ -27,16 +27,30 @@ docker-compose up -d --scale web=3
 ```
 
 ## Pruebas
-Ingresar los mensajes que quieren ser guardados.  
+### Local
+* Ingresar los mensajes que quieren ser guardados.  
 ![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/Prueba1.jpg)  
-Mensajes guardados en la base de datos mongo.  
+* Mensajes guardados en la base de datos mongo.  
 ![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/BaseDatos.jpg)
+
+### AWS
+* Imagenes y contenedores creados en la maquina virtual EC2.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/DockerAWS.jpg)  
+* Grupo de seguridad y los puertos necesarios abiertos.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/Puertos.jpg)  
+* Ingresar los mensajes que quieren ser guardados.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/Prueba1AWS.jpg)  
+* Mensajes guardados en la base de datos mongo.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/BaseDatosAWS.jpg)
+
 
 ## Construido con
 * [MAVEN](https://maven.apache.org/) - Administrador de dependencias.
 * [GIT](https://git-scm.com/) - Control de versiones.
 * [JUNIT](https://junit.org/junit5/) - Framework para realizar y automatizar pruebas.
 * [SPARK](http://sparkjava.com/) - Framework para el desarrollo de aplicaciones web.
+* [AWS](https://aws.amazon.com/es/console/) - Computación en la nube.
+* [DOCKER](https://www.docker.com/) - Tecnología para el uso de contenedores.
 * JAVA - Lenguaje de programación.
 
 ## Autor
