@@ -21,16 +21,16 @@ Dentro de los directorios DOCKER_AWS_LAB/APP-LB-RoundRobin y DOCKER_AWS_LAB/LogS
 ```
 mvn package
 ```
-Para ejecutar el proyecto de manera local, dentro del directorio DOCKER_AWS_LAB ejecutamos la siguiente linea desde la consola de comandos y desde un navegador buscamos `http://192.168.99.100:8000//` :
+Para ejecutar el proyecto de manera local, dentro del directorio DOCKER_AWS_LAB ejecutamos la siguiente linea desde la consola de comandos y desde un navegador buscamos `http://192.168.99.100:8000/` :
 ```
 docker-compose up -d --scale web=3
 ```
 
-## Ejecutando las pruebas
-Para correr las pruebas ejecutamos la siguiente linea:
-```
-mvn test
-```
+## Pruebas
+Ingresar los mensajes que quieren ser guardados.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/Prueba1.jpg)  
+Mensajes guardados en la base de datos mongo.  
+![](https://github.com/Camu10/DOCKER_AWS_LAB/blob/master/img/BaseDatos.jpg)
 
 ## Construido con
 * [MAVEN](https://maven.apache.org/) - Administrador de dependencias.
