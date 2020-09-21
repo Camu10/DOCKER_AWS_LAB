@@ -1,5 +1,4 @@
 var apiclient = (function () {
-    var num=1;
     var url=window.location.href+'results';
     function addMessage(){
         var mensaje=document.getElementById("Message").value;
@@ -10,6 +9,7 @@ var apiclient = (function () {
             })
     }
     function getMessages(){
+        var num=1;
         $("#Table > tbody").empty();
         axios.get(url).then(res=>{
             console.log(res.data)
