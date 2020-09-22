@@ -14,11 +14,19 @@ import java.util.Date;
 public class DBConnection {
     MongoClientURI uri;
     MongoClient mongoClient;
+
+    /**
+     * Constructor de la clase DBConnection
+     */
     public DBConnection() {
         uri = new MongoClientURI("mongodb://Carlos:1234@192.168.99.100:27017/?serverSelectionTimeoutMS=5000&connectTimeoutMS=10000&authSource=Arep&authMechanism=SCRAM-SHA-1&3t.uriVersion=3");
         mongoClient = new MongoClient(uri);
     }
 
+    /**
+     * Inserta el mensaje en la base de datos.
+     * @param message El elemento que se quiere insertar en la base de datos.
+     */
     public void insertMessage(Message message){
         mongoClient = new MongoClient(uri);
         MongoDatabase database = mongoClient.getDatabase("Arep");
@@ -29,6 +37,10 @@ public class DBConnection {
         collection.insertOne(document);
     }
 
+    /**
+     * Realiza una consulta a la base de datos y obtiene todos los datos que tiene.
+     * @return Una lista con todos los mensajes que se encuentran almacenados en la base de datos.
+     */
     public ArrayList<Message> getMessages() {
         MongoDatabase database = mongoClient.getDatabase("Arep");
         MongoCollection<Document> collection = database.getCollection("Message");

@@ -7,6 +7,10 @@ import edu.escuelaing.arep.app.persistence.DBConnection;
 import static spark.Spark.*;
 
 public class App {
+    /**
+     * Metodo que se encarga de recibir las peticiones GET y POST
+     * @param args Argumentos que entran a la clase principal.
+     */
     public static void main( String[] args ) {
         port(getPort());
         DBConnection connection = new DBConnection();
@@ -22,6 +26,10 @@ public class App {
         });
     }
 
+    /**
+     * Este metodo lee por defecto el puerto dado por la variable PORT del entorno.
+     * @return El puerto por defecto en local.
+     */
     static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
